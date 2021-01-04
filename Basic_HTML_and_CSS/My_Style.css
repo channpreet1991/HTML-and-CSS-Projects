@@ -1,0 +1,17 @@
+.font_1{
+    background-color: black;
+    color: yellow;
+    font-size: large;
+}
+.font_2{
+    background-color: darkblue;
+    color: white;
+    font-size: medium;
+}
+.My_Style{
+    background-color: brown;
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: small;
+}
