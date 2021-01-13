@@ -1,0 +1,37 @@
+body {
+    background-color: #EAF6F6;
+    font-family: sans-serif;
+
+  }
+  hr {
+    /* background-color: white; */
+    border-style: dotted none none;
+    border-color: grey;
+    border-width: 6px;
+    width: 6%;
+  }
+  h1{
+      color: #66bfbf;
+      text-shadow: 5px 2px 5px black;
+  }
+  h3{
+    color: #66bfbf;
+}
+
+img{
+  height: 100px;
+  width: 100px;
+}
+
+form input{
+  width: 200px;
+  margin: 4px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+footer{
+  text-align: center;
+}
+
