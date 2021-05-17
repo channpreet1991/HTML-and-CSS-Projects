@@ -19,8 +19,9 @@ body {
 }
 
 img{
-  height: 100px;
+  height: 200px;
   width: 100px;
+  border-radius: 8px;
 }
 
 form input{
