@@ -14,9 +14,10 @@
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
 
         <!--Breaks inserted to add space between navbar and the first heading-->
@@ -50,6 +51,68 @@
             </strong>
         </div>
 
+        <!-- Slideshow -->
+  <div id="Slideshow">
+    <div id="Slideshow_Background"> 
+      <div id="Slideshow_Container">
+        
+		<div class="mySlides fade">
+          <div class="Slide_Number">1 / 6</div>
+            <img class="Slide_Show_Images" src="images/pic.jpg" style="width:100%">
+              <div class="text">I'm available to assist you on your project!</div>
+        </div>
+        
+		<div class="mySlides fade">
+          <div class="Slide_Number">2 / 6</div>
+            <img class="Slide_Show_Images" src="Stylesheet/Images/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+              <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="Slide_Number">3 / 6</div>
+            <img class="Slide_Show_Images" src="Stylesheet/Images/Python.png" style="width:100%">
+              <div class="text">the popular programming language Python,</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="Slide_Number">4 / 6</div>
+            <img class="Slide_Show_Images" src="Stylesheet/Images/C_Sharp_and_Dot_NET.png" style="width:100%">
+              <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+        </div>
+
+		<div class="mySlides fade">
+	      <div class="Slide_Number">5 / 6</div>
+			<img class="Slide_Show_Images" src="Stylesheet/Images/SQL_and_Database.jpg" style="width:100%">
+              <div class="text">back end development, databases and SQL.</div>
+			</div>
+
+		<div class="mySlides fade">
+		  <div class="Slide_Number">6 / 6</div>
+			<img class="Slide_Show_Images" src="Stylesheet/Images/Coding_1.jpg" style="width:100%">
+			  <div class="text"> 
+				<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+			  </div>
+	    </div>
+	
+		  <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+		
+	  </div>
+  <br>
+
+      <div style="text-align:center">
+ 
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
+		<span class="dot" onclick="currentSlide(4)"></span> 
+		<span class="dot" onclick="currentSlide(5)"></span> 
+		<span class="dot" onclick="currentSlide(6)"></span> 
+
+      </div>
+    </div>
+  </div>
+
         <!--About section-->
         <div class="Row" id="About">
             <!--Left column-->
@@ -60,7 +123,7 @@
             <div class="Column_1">
                 <h1>About</h1>
                 <p>
-                    I am a software developer who loves to code! As a father of two, I enjoy time with my family and traveling. 
+                    I am a software developer who loves to code. 
                     <br>
                     <br>I am a graduate of <a href="https://www.academyoflearning.com/" target="_blank">The Academy of Learning College</a>Web & Software Developer course, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, .Net. Apart from that I also have a knowlwdge of Node JS and Mongo DB. 
                     <br>
@@ -69,7 +132,7 @@
             </div>
         </div>
 
-        <!--GitHub section-->
+        <!--GitHub-->
         <div class="Row" id="GitHub">
             <!--Left column-->
             <div class="Column_1">
@@ -87,26 +150,25 @@
         </div>
 
         <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="images/connect.png" alt="Contact_Image">
-            </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
+        <div id="Contact"> 
+            <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+              <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
                 <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Enter your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                      <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                      <input type="text" placeholder="Type your message here" name="message">
+         
+            <button type="submit" class="btn">SUBMIT</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
-            </div>
-        </div>
+              </div>
+          </div>
 
         <!--Footer section-->
         <footer>
@@ -115,5 +177,6 @@
                 <br>
             </p>
         </footer>
+        <script src="JS/portfolio.js"></script>
     </body>
 </html>
